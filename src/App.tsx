@@ -35,14 +35,27 @@ export default function App() {
     <div className="min-h-screen bg-[#060a17] flex flex-col items-center text-slate-200 font-sans">
       {/* Header styling based on the affiliate site */}
       <header className="bg-[#0b132b]/90 backdrop-blur-md text-white py-4 px-6 flex items-center justify-center border-b border-white/5 shadow-md w-full fixed top-0 left-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full border-2 border-blue-400 flex items-center justify-center text-blue-400 font-bold text-lg font-sans">
-            ab
+        <div className="flex items-center justify-center">
+          <img 
+            src="/images/logo.png" 
+            alt="Advanced Bionutritionals" 
+            className="h-10 object-contain"
+            onError={(e) => {
+              // Fallback caso a imagem ainda não tenha sido enviada
+              (e.target as HTMLImageElement).style.display = 'none';
+              const fallback = document.getElementById('logo-fallback');
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+          <div id="logo-fallback" style={{display: 'none'}} className="items-center gap-2">
+            <div className="w-8 h-8 rounded-full border-2 border-blue-400 flex items-center justify-center text-blue-400 font-bold text-lg font-sans">
+              ab
+            </div>
+            <span className="text-xl font-bold font-sans tracking-tight leading-none text-left">
+              advanced<br/>
+              <span className="text-sm font-normal text-slate-300">bionutritionals&reg;</span>
+            </span>
           </div>
-          <span className="text-xl font-bold font-sans tracking-tight leading-none text-left">
-            advanced<br/>
-            <span className="text-sm font-normal text-slate-300">bionutritionals&reg;</span>
-          </span>
         </div>
       </header>
 

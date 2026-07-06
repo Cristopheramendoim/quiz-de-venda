@@ -1,0 +1,2 @@
+Coloque a imagem do ícone da aba aqui e renomeie para 'favicon.png'.
+Coloque a imagem do logotipo principal da página aqui e renomeie para 'logo.png'.
