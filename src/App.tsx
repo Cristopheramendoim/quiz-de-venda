@@ -32,9 +32,9 @@ export default function App() {
   }, [step]);
 
   return (
-    <div className="min-h-screen bg-[#f4f7f6] flex flex-col items-center text-slate-800 font-sans">
+    <div className="min-h-screen bg-[#060a17] flex flex-col items-center text-slate-200 font-sans">
       {/* Header styling based on the affiliate site */}
-      <header className="bg-[#0b132b] text-white py-4 px-6 flex items-center justify-center shadow-md w-full fixed top-0 left-0 z-50">
+      <header className="bg-[#0b132b]/90 backdrop-blur-md text-white py-4 px-6 flex items-center justify-center border-b border-white/5 shadow-md w-full fixed top-0 left-0 z-50">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full border-2 border-blue-400 flex items-center justify-center text-blue-400 font-bold text-lg font-sans">
             ab
@@ -48,7 +48,7 @@ export default function App() {
 
       {/* Main Quiz Area */}
       <div className="flex-grow flex items-center justify-center w-full p-4 pt-24">
-        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 w-full max-w-lg p-8 md:p-10 min-h-[360px] transition-all duration-500 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="bg-[#0f172a]/80 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-white/10 w-full max-w-lg p-8 md:p-10 min-h-[360px] transition-all duration-500 relative overflow-hidden flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">
             {step === 'q1' && (
               <motion.div
@@ -59,17 +59,17 @@ export default function App() {
                 transition={{ duration: 0.3 }}
                 className="w-full text-center"
               >
-                <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#0b132b] mb-8 leading-tight">Do you often feel a lack of energy during the day?</h3>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-white mb-8 leading-tight">Do you often feel a lack of energy during the day?</h3>
                 <div className="flex flex-col gap-4">
                   <button 
                     onClick={() => handleNext('q2')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
                     Yes, almost every day
                   </button>
                   <button 
                     onClick={() => handleNext('q2')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
                     Sometimes
                   </button>
@@ -86,17 +86,17 @@ export default function App() {
                 transition={{ duration: 0.3 }}
                 className="w-full text-center"
               >
-                <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#0b132b] mb-8 leading-tight">Are you over 40 years old?</h3>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-white mb-8 leading-tight">Are you over 40 years old?</h3>
                 <div className="flex flex-col gap-4">
                   <button 
                     onClick={() => handleNext('q3')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
                     Yes
                   </button>
                   <button 
                     onClick={() => handleNext('q3')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
                     No
                   </button>
@@ -113,19 +113,19 @@ export default function App() {
                 transition={{ duration: 0.3 }}
                 className="w-full text-center"
               >
-                <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#0b132b] mb-8 leading-tight">Would you like a natural way to support healthy blood flow and energy levels?</h3>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-white mb-8 leading-tight">Would you like a natural way to support healthy blood flow and energy levels?</h3>
                 <div className="flex flex-col gap-4">
                   <button 
                     onClick={() => handleNext('loading')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
-                    Yes, show me the video
+                    Yes, I want a natural solution
                   </button>
                   <button 
                     onClick={() => handleNext('loading')}
-                    className="bg-[#b37022] hover:bg-[#9a5e19] text-white font-bold text-lg py-4 px-6 rounded-xl transition-colors w-full cursor-pointer shadow-md"
+                    className="bg-[#b37022] hover:bg-[#c9802a] text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 w-full cursor-pointer shadow-[0_0_15px_rgba(179,112,34,0.3)] hover:shadow-[0_0_25px_rgba(179,112,34,0.5)] border border-[#c9802a]/30"
                   >
-                    I'm interested
+                    Yes, I want to boost my energy
                   </button>
                 </div>
               </motion.div>
@@ -141,15 +141,15 @@ export default function App() {
                 className="w-full flex flex-col items-center justify-center space-y-6"
               >
                 <Loader2 className="w-14 h-14 text-[#b37022] animate-spin" />
-                <div className="text-[#0b132b] font-medium text-xl text-center">
+                <div className="text-white font-medium text-xl text-center">
                   <p>Analyzing your answers...</p>
-                  <p className="text-base mt-2 text-slate-500 font-sans mb-4">Redirecting to the presentation...</p>
+                  <p className="text-base mt-2 text-slate-400 font-sans mb-4">Redirecting to the presentation...</p>
                   
                   <a 
                     href={affiliateLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block mt-6 text-sm text-[#b37022] hover:underline font-normal"
+                    className="inline-block mt-6 text-sm text-[#b37022] hover:text-[#c9802a] hover:underline font-normal transition-colors"
                   >
                     Not redirecting? Click here to continue.
                   </a>
