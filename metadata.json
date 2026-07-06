@@ -1,0 +1,6 @@
+{
+  "name": "Quick Health Assessment",
+  "description": "A short health assessment quiz that evaluates energy levels and redirects to a targeted presentation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
